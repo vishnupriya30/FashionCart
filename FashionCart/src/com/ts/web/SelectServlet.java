@@ -29,8 +29,17 @@ public class SelectServlet extends HttpServlet {
 	    int SubId = Integer.parseInt(request.getParameter("subId"));
 	    //System.out.println(SubId);
 		System.out.println("hello servlet");
-	
 		List<Item> itemsList =(List)ItemDao.getAllItems(SubId);
+		Item temp;
+		for(int i = 0;i < itemsList.size();i++){
+			for(int j =0;j < itemsList.size() - i - 1;j++){
+				if(itemsList.get(i).getPrice() > itemsList.get(j).getPrice()){
+					temp = itemsList.get(j);
+					itemsList.set(j, itemsList.get(j +1));
+					itemsList.set(j + 1, temp);
+				}
+			}
+		}
 		System.out.println("hello"+itemsList);
 		request.setAttribute("itemsList",itemsList);
 		RequestDispatcher rd = request.getRequestDispatcher(

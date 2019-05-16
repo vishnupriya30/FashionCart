@@ -121,7 +121,7 @@ smalltext{
 </form>
 <script> 
   
-var deadline = new Date("may 13, 2019 22:02:00").getTime(); 
+var deadline = new Date("may 14, 2019 19:26:00").getTime(); 
   
 var x = setInterval(function() { 
   

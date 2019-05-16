@@ -6,13 +6,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Fashion Cart</title>
 <link rel="icon" href="pics/fashioncart.PNG" type="image/x-icon">
-
+<link href='https://fonts.googleapis.com/css?family=Comic Sans MS' rel='stylesheet'>
 </head>
 <style>
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+img {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 .total{
 background-color: #f2f2f2;
-width:100%;
 height:100%;
+width:100%;
+font-family:Comic Sans MS;
 }
 #loader {
   position: absolute;
@@ -65,19 +73,19 @@ height:100%;
   text-align: center;
 }
 </style>
-<body onload="myFunction()" style="margin:0;">
+<body onload="myFunction()" style="margin:0 ;background-image:url(pics/trans5.jpg)">
 
 <div id="loader"></div>
 
 <div style="padding-top:120px" id="myDiv" class="animate-bottom">
-  <h2>Transaction Successful!</h2>
-  <p>Track your orders in MyOrders</p>
+  <h1 style="margin-left:170px; font-family:Comic Sans MS">Your Order has been placed!</h1>
+  <h3 style="font-family:Comic Sans MS; margin-left:190px;">View your orders in MyOrders</h3>
+  <h3 style="font-family:Comic Sans MS; margin-left:190px;">Payment Mode : Cash on Delivery only</h3>
   </br></br></br></br></br></br>
- <div style="align: center; text-decoration:none"> <a href = 'AfterLoginHomePage.jsp' style="padding:20px;background-color:#ff6633;color:white;margin-left:700px;font-size:20px">Go to Home Page</a>
+ <div style="align: center; text-decoration:none"> <a href = 'AfterLoginHomePage.jsp' style="padding:20px;background-color:#ff6633;color:white;margin-left:700px;margin-top:-500px;font-size:20px; text-decoration:none">Go to Home Page</a>
 </div>
 </div>
- 
- 
+ </div>
 
 <script>
 var myVar;
@@ -91,8 +99,6 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
-
-</div>
 
 
 </body>

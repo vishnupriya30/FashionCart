@@ -2,7 +2,10 @@ package com.ts.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -29,15 +32,19 @@ public class OrderServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 	    String custId = (String) session.getAttribute("custId");
+	    System.out.println("hello hari");
 	    System.out.println("hello" + custId);
 	    int Id = Integer.parseUnsignedInt(custId);
+	    DateFormat df = new SimpleDateFormat("dd/MM/yy");
+	    Calendar calobj = Calendar.getInstance();
+	    System.out.println("Date:"+df.format(calobj.getTime()));
 	    if(Id > 0){
 		out.print("<html>");
 		System.out.println("Hi OrderItemservlet");
 		CartDao cartdao = new CartDao();
 		List<Cart> items = cartdao.getAllItemsByCustId(Id);
 		System.out.println(items);
-		Orders order = new Orders(Id, "5/5/2019");
+		Orders order = new Orders(Id, df.format(calobj.getTime()));
 		int y = OrderDao.addOrder(order);
 		System.out.println("adding order:" + y);
 		System.out.println(Id);

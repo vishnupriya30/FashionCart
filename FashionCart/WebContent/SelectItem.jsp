@@ -58,10 +58,10 @@ color:rgb(0,138,230);
     <div class="w3-dropdown-hover w3-mobile"  style="margin-left:15%">
       <button class="w3-button" style="background-color:white">Mobiles<i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block">
-        <a href="SelectServlet?subId=10" class="w3-bar-item w3-button w3-mobile">Samsung</a>
-        <a href="SelectServlet?subId=11" class="w3-bar-item w3-button w3-mobile">Redmi</a>
-        <a href="SelectServlet?subId=13" class="w3-bar-item w3-button w3-mobile">Oppo</a>
-        <a href="SelectServlet?subId=12" class="w3-bar-item w3-button w3-mobile">One plus</a>
+        <a href="SelectServlet?subId=1" class="w3-bar-item w3-button w3-mobile">Samsung</a>
+        <a href="SelectServlet?subId=2" class="w3-bar-item w3-button w3-mobile">Redmi</a>
+        <a href="SelectServlet?subId=3" class="w3-bar-item w3-button w3-mobile">Oppo</a>
+        <a href="SelectServlet?subId=4" class="w3-bar-item w3-button w3-mobile">One plus</a>
       </div>
     </div>
     <div class="w3-dropdown-hover w3-mobile"  style="margin-left:15%">

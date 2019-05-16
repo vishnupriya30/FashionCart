@@ -182,10 +182,12 @@ List<Orders> orders = (List<Orders>)request.getAttribute("orders");
 System.out.println(orders);
 for(Orders order : orders){
 List<OrderItem> orderItem = OrderItemDao.getAllOrderItems(order.getOrderId());
+String date = order.getDate1();
 int id = order.getOrderId();
 %>
 <div style="background-color:white">
-<h3 style="margin-left:200px"><b>OrderId:19F2P_<%= id%></br></br></h3>
+<h3 style="margin-left:200px"><b>OrderId:19F2P_<%= id%></h3>
+<h4 style="margin-left:1000px"><b>OrderDate:<%= date%></br></br></h4>
 <%
 double total = 0;
 for(OrderItem orderitem: orderItem){

@@ -26,11 +26,23 @@ public class Bidservlet extends HttpServlet {
 	    int id = Integer.parseUnsignedInt(custId);
 	    int price = Integer.parseInt(request.getParameter("price"));
 	    System.out.println(price);
+	    if(price<1900){
+	    	out.print("<html>");
+	    	out.print("<body color=\"white\">");
+	    	out.print("<b>Please enter correct amount</b>");
+	    	out.print("</body>");
+	    	out.print("</html>");
+	    	RequestDispatcher rd = request.getRequestDispatcher(
+					"timer.jsp");
+	    	rd.include(request, response);
+	    }
+	    else{
 	    Bid bid = new Bid(id,price);
 	    int x = BidDao.addBid(bid);
 	    RequestDispatcher rd = request.getRequestDispatcher(
 				"AfterLoginHomePage.jsp");
 		rd.include(request, response);
+	    }
 	    
 	}
 
